@@ -1,4 +1,4 @@
-<div class="container py-5">
+<div class="container py-5" style="background: linear-gradient(45deg, cadetblue, bisque); height: 100vh !important;">
     <div class="row">
         <div class="col-md-6">
             <div class="card shadow-sm">
@@ -30,6 +30,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title"><?= htmlspecialchars($review['name']) ?></h5>
                                         <p class="card-text"><?= htmlspecialchars($review['message']) ?></p>
+                                        <hr>
+                                        <p class="card-text"><?= htmlspecialchars($review['date']) ?></p>
                                     </div>
                                 </div>
                             <?php endforeach; ?>

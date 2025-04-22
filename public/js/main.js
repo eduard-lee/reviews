@@ -23,6 +23,8 @@ $('#js-ajax-test').click((e) => {
                     <div class="card-body">
                         <h5 class="card-title">${el.name}</h5>
                         <p class="card-text">${el.message}</p>
+                        <hr>
+                        <p class="card-text">${el.date}</p>
                     </div>
                 `;
 

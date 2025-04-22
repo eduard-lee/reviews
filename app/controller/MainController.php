@@ -13,7 +13,8 @@ class MainController extends Controller
             ->factory()
             ->setValues([
                 'name' => $_POST['name'],
-                'message' => $_POST['message']
+                'message' => $_POST['message'],
+                'date' => date('Y-m-d H:m:s')
             ])
             ->save();
 
@@ -27,7 +28,8 @@ class MainController extends Controller
         return array_map(function($model) {
             return [
                 'name' => $model->name,
-                'message' => $model->message
+                'message' => $model->message,
+                'date' => $model->date
             ];
         }, $queryDb);
     }
