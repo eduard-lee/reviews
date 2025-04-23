@@ -9,7 +9,7 @@ use Imy\Core\Router;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
+<body style="background: linear-gradient(180deg, cadetblue, bisque); min-height: 100vh !important;">
 
     <?php include tpl(strtolower(Router::$route) . '.' . (!empty($tpl) ? $tpl : 'init')); ?>
 

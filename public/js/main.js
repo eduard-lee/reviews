@@ -4,6 +4,11 @@ $('#js-ajax-test').click((e) => {
     const name = document.getElementById('nameInput').value;
     const message = document.getElementById('reviewTextarea').value;
 
+    if (!name || !message) {
+        alert('Необходимо заполнить обязательные поля!');
+        return;
+    }
+
     $.ajax({
         type: 'POST',
         dataType: 'json',
@@ -38,4 +43,10 @@ $('#js-ajax-test').click((e) => {
             alert('Ошибка при отправке: ' + error);
         }
     });
+});
+
+$(document).ready(function() {
+    $('#nameInput').on('input', function() {
+        $('#js-ajax-test').prop('disabled', !$(this).val().trim());
+    }).trigger('input');
 });

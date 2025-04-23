@@ -1,4 +1,4 @@
-<div class="container py-5" style="background: linear-gradient(45deg, cadetblue, bisque); height: 100vh !important;">
+<div class="container py-5">
     <div class="row">
         <div class="col-md-6">
             <div class="card shadow-sm">
